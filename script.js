@@ -31,6 +31,7 @@ async function fetchWeatherData(location) {
 function displayWeatherData(data) {
     document.getElementById('weatherData').innerHTML = `
         <h2>Weather in ${data.nearest_area[0].areaName[0].value}</h2>
+        <p>Condition: ${data.current_condition[0].weatherDesc[0].value}</p>
         <p>Temperature: ${data.current_condition[0].temp_C}°C</p>
     `;
     
